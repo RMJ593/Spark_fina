@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage';
 import Community from './pages/Community';
 import RedeemPage from './pages/RedeemPage';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/community" element={<Community />} />
           <Route path="/redeem" element={<RedeemPage />} />
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );
