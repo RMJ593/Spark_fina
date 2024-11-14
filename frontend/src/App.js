@@ -8,14 +8,16 @@ import EventPage from './pages/EventPage';
 import AboutPage from './pages/AboutPage';
 import Community from './pages/Community';
 import RedeemPage from './pages/RedeemPage';
-import Navbar from './components/Navbar';
+import NavigationBar from './components/NavigationBar';
 import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
     <Router>
       <div>
-      <Navbar/>
+      <NavigationBar/>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
