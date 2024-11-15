@@ -28,6 +28,12 @@
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .event-image {
@@ -65,10 +71,18 @@
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .explore-button:hover {
   background-color: #1f1f5a;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.explore-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .modal-overlay {
@@ -172,7 +186,7 @@
   line-height: 1.6;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .events-container {
     padding-bottom: 50px;
   }

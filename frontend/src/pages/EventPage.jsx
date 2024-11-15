@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./EventPage.css";
 import img1 from "../components/image/sdgcampaign.jpg";
 import img2 from "../components/image/sdgquiz.jpg";
-import img3 from "../components/image/compliment wall.jpg";
+import img3 from "../components/image/compliment wall (1).jpg";
 
 function EventPage() {
   const [selectedEvent, setSelectedEvent] = useState(null);
