@@ -1,21 +1,23 @@
-
-
 import React from "react";
 
-import logo from "../components/image/Group5.png";
-const Login = () => {
+const Register = () => {
   return (
-    <div className="login-page" style={styles.page}>
-      <div className="login-container" style={styles.container}>
-        <div className="logo" style={styles.logo}>
-          <img
-            src={logo}
-            alt="Spark Logo"
-            style={styles.logoImg}
+    <div className="register-page" style={styles.page}>
+     
+      
+      <div className="register-container" style={styles.container}>
+        <h1 style={styles.title}>Create Your Account</h1>
+        <form className="register-form" style={styles.form}>
+          <label htmlFor="name" style={styles.label}>
+            Full Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            style={styles.input}
           />
-        </div>
-        <h1 style={styles.title}>Welcome to Spark</h1>
-        <form className="login-form" style={styles.form}>
           <label htmlFor="email" style={styles.label}>
             Email Address
           </label>
@@ -33,14 +35,24 @@ const Login = () => {
             type="password"
             id="password"
             name="password"
-            placeholder="Enter your password"
+            placeholder="Create a password"
+            style={styles.input}
+          />
+          <label htmlFor="confirmPassword" style={styles.label}>
+            Confirm Password
+          </label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm your password"
             style={styles.input}
           />
           <button type="submit" style={styles.button}>
-            Login
+            Register
           </button>
           <p style={styles.footerText}>
-            Don't have an account? <a href="/register" style={styles.link}>Sign up</a>
+            Already have an account? <a href="/login" style={styles.link}>Login</a>
           </p>
         </form>
       </div>
@@ -50,27 +62,28 @@ const Login = () => {
 
 const styles = {
   page: {
-    backgroundColor: "#f8f9fa",
+    
     display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
     margin: 0,
   },
+  logo: {
+    marginBottom: "1rem",
+  },
+  logoImg: {
+    width: "120px",
+    height: "auto",
+  },
   container: {
-    backgroundColor: "#ffffff", 
+    backgroundColor: "#ffffff",
     borderRadius: "8px",
     padding: "2rem",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
     width: "400px",
     textAlign: "center",
-  },
-  logo: {
-    marginBottom: "1rem",
-  },
-  logoImg: {
-    width: "100px",
-    height: "auto",
   },
   title: {
     fontSize: "1.5rem",
@@ -114,5 +127,4 @@ const styles = {
   },
 };
 
-export default Login;
-
+export default Register;
