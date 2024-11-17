@@ -4,6 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/register';
 import EventPage from './pages/EventPage';
 import AboutPage from './pages/AboutPage';
 import Community from './pages/Community';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/community" element={<Community />} />
           <Route path="/redeem" element={<RedeemPage />} />
+          <Route path="/register" element={<RegisterPage />} />
         </Routes>
         {/* <Footer/> */}
       </div>
