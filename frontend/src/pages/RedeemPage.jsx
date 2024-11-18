@@ -3,7 +3,7 @@ import "./Redeem.css";
 
 const RedeemPage = () => {
   const [files, setFiles] = useState([]);
-  const [showPopup, setShowPopup] = useState(false); // State to control popup visibility
+  const [showPopup, setShowPopup] = useState(false);
 
   // Handles file selection
   const handleFileChange = (event) => {
@@ -12,18 +12,18 @@ const RedeemPage = () => {
       (file) => !files.some((existingFile) => existingFile.name === file.name)
     );
     setFiles([...files, ...uniqueFiles]);
-    event.target.value = ""; // Clear the input for reselection
+    event.target.value = "";
   };
 
-  // Handles file removal
+
   const removeFile = (fileName) => {
     setFiles(files.filter((file) => file.name !== fileName));
   };
 
-  // Handles upload button click
+
   const handleUpload = () => {
     if (files.length === 0) {
-      setShowPopup(true); // Show popup if no files are uploaded
+      setShowPopup(true);
     } else {
       alert("File Upload Successful.\nYour file has been uploaded successfully and is now pending confirmation. Your credits will be updated within a week.");
     }
