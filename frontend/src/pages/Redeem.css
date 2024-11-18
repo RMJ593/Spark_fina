@@ -1,0 +1,153 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Pure black background */
+  color: white;
+  overflow: hidden; /* Disable scrolling */
+}
+
+.redeem-page {
+  display: flex;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  padding-top: 20px;
+  padding-right: 80px;
+}
+
+.upload-container {
+  width: 400px;
+  height: 500px; /* Rectangular design */
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black for glass effect */
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass for Safari */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  overflow-y: auto; /* Allow scrolling if files overflow */
+  margin-top: 50px; /* Adjust this value to move the container upwards or downwards */
+  padding-top: 90px;
+}
+
+.file-upload-label {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.file-upload-label input {
+  display: none; /* Hide default file input */
+}
+
+.file-list {
+  width: 100%;
+  max-height: 180px; /* Thinner rectangle for file list */
+  overflow-y: auto; /* Scrollable file list */
+  margin-bottom: 20px;
+}
+
+.no-files {
+  margin-bottom: 20px; /* Add gap between message and upload button */
+  font-size: 14px;
+  /*color: white;*/
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  padding: 3px 15px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent for file items */
+  border-radius: 4px;
+  color: white;
+}
+
+.file-item:hover {
+  background: rgba(255, 255, 255, 0.1); /* Lighter background on hover */
+}
+
+.file-link {
+  color: black; /* Blue for clickable link */
+  text-decoration: none;
+}
+
+.file-remove-btn {
+  background: transparent;
+  color: black; /* Red for remove button */
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0; /* No extra padding */
+}
+
+.file-remove-btn:hover {
+  color: black; /* Slightly lighter red on hover */
+}
+
+.upload-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 50px; /* Ensures consistent gap above the button */
+}
+
+.upload-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Popup styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.popup {
+  position: fixed;
+  top: 47%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+  z-index: 1001;
+  color: white;
+  padding-inline: 95px;
+}
+
+.popup.error {
+  border: 2px solid #dc3545; /* Red for error */
+}
+
+.popup button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
