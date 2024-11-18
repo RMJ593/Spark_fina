@@ -12,7 +12,7 @@ function NavigationBar() {
         
         <Navbar.Brand href="#home">
           <img
-            src={require('../components/image/Group 5 (1).png')}
+            src={require('../components/image/Group5.png')}
             alt="Logo"
             width="50"
             height="80"
