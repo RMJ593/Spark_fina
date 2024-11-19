@@ -1,4 +1,3 @@
-//src/pages/Homepage.js
 import React, { useState, useEffect } from "react";
 import "./Redeem.css";
 
@@ -41,11 +40,52 @@ const RedeemPage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Welcome to the Event Management Platform</h1>
-      <p>This is the Redeem Page</p>
+    <div className="redeem-page">
+      <div className="upload-container">
+        <label className="file-upload-label">
+          Choose File
+          <input type="file" onChange={handleFileChange} multiple />
+        </label>
+        <div className="file-list">
+          {files.length === 0 ? (
+            <div className="no-files">No files uploaded</div>
+          ) : (
+            files.map((file) => (
+              <div key={file.name} className="file-item">
+                <a
+                  href={URL.createObjectURL(file)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="file-link"
+                >
+                  {file.name}
+                </a>
+                <button
+                  className="file-remove-btn"
+                  onClick={() => removeFile(file.name)}
+                >
+                  &times;
+                </button>
+              </div>
+            ))
+          )}
+        </div>
+        <button className="upload-btn" onClick={handleUpload}>
+          Upload
+        </button>
+      </div>
+
+      {/* Popup */}
+      {showPopup && (
+        <div className="overlay">
+          <div className="popup error">
+            <p>File not uploaded.</p>
+            <button onClick={() => setShowPopup(false)}>OK</button>
+          </div>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default RedeemPage;
