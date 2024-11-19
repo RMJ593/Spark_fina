@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,7 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Spark
-Spark is a social responsibility platform that fosters collaboration for SDG 17, enabling users to engage in social causes, earn rewards, and drive global impact through partnerships, community engagement, and real-time impact tracking.
->>>>>>> f4fc0684fe08aab6e31ce3da0805c7f9a3db8dc4
