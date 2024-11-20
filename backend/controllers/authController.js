@@ -1,11 +1,11 @@
 const supabase = require('../lib/supabase');
 
 exports.signUp = async (req, res) => {
-  const { fullname, email, password, password2 } = req.body;
+  const { fullname, email, password, password2, options } = req.body;
 
   // Validate input fields
-  if (!fullname || !email || !password || !password2) {
-    return res.status(400).json({ error: 'All fields are required.' });
+  if (!fullname || !email || !password || !password2 || !options || !options.emailRedirectTo) {
+    return res.status(400).json({ error: 'All fields are required.' });  // and options ,options.emailRedirectTo are reqd.
   }
   if (password !== password2) {
     return res.status(400).json({ error: 'Passwords do not match.' });
@@ -16,6 +16,9 @@ exports.signUp = async (req, res) => {
     const { data: authData, error: authError } = await supabase.auth.signUp({
       email,
       password,
+      options: {
+        emailRedirectTo: options.emailRedirectTo,  // Using emailRedirectTo from options
+      },
     });
 
     if (authError) {
@@ -45,7 +48,6 @@ exports.signUp = async (req, res) => {
     return res.status(500).json({ error: 'Something went wrong.' });
   }
 };
-
 
 // Confirm Email Endpoint
 exports.confirmEmail = async (req, res) => {

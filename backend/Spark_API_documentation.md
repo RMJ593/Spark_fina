@@ -18,7 +18,10 @@
   "fullname": "username",
   "email": "user@example.com",
   "password": "securePassword123",
-  "password2": "securePassword123"
+  "password2": "securePassword123",
+  "options": {
+    "emailRedirectTo": "https://your-frontend-url.com/welcome", // Replace with actual URL
+  },
 }
 ```
 
