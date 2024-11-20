@@ -31,7 +31,7 @@ exports.signUp = async (req, res) => {
     // Step 2: Insert data into the public.profiles table
     const { error: profileError } = await supabase
       .from('profiles')
-      .insert([{ id: userId, fullname, email }]);
+      .insert([{ userid: userId, fullname, email }]);
 
     if (profileError) {
       console.error(profileError);
