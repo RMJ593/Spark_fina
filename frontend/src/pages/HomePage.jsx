@@ -25,7 +25,7 @@ function HomePage() {
             alignItems: 'center',
             justifyContent: 'center',
             overflow: 'hidden',
-            height:'400px'
+            height:'497px'
           }}
         >
           <img
@@ -69,11 +69,10 @@ function HomePage() {
         </Carousel.Item>
         <Carousel.Item
           style={{
-            display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             overflow: 'hidden',
-            height:'400px'
+            height:'497px'
           }}
         >
           <img
