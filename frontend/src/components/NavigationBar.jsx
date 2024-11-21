@@ -7,15 +7,15 @@ function NavigationBar() {
   return (
     <>
       
-    <Navbar bg="light" variant="light" expand="lg">
+    <Navbar bg="white" variant="light" expand="lg">
       <Container>
         
         <Navbar.Brand href="#home">
           <img
-            src={require('../components/image/Group5.png')}
+            src={require('../components/image/logo_new.png')}
             alt="Logo"
-            width="50"
-            height="80"
+            width="80"
+            height="90"
             className="d-inline-block align-top"
           />
         </Navbar.Brand>

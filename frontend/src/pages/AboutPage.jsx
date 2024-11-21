@@ -1,13 +1,13 @@
 import React from "react";
 import "./about.css";
-import logo from '../components/image/logo.png';
+// import logo from '../components/image/logo.png';
 import profilePic from '../components/image/pic.jpg';
-
+import { Link } from 'react-router-dom'; 
 
 const About = () => {
   return (
     <div className="container">
-      <img className="logo" src={logo} alt="Spark Logo" />
+      {/* <img className="logo" src={logo} alt="Spark Logo" /> */}
 
       <div className="content">
         <img className="pic" src={profilePic} alt="Profile Picture" />
@@ -20,7 +20,7 @@ const About = () => {
             contributions to these initiatives. Join our community to share ideas, stay updated on global
             issues, and track your impact in real-time. Together, let's create positive change.
           </p>
-          <button className="btn">View Past Events</button>
+          <Link to="/event"><button className="btn"> View Past Events</button></Link>
         </div>
       </div>
     </div>
