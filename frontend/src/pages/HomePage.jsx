@@ -1,31 +1,31 @@
 import React from 'react';
-// import NavigationBar from '../components/NavigationBar';
-import {Carousel,Button} from 'react-bootstrap';
+import { Carousel, Button } from 'react-bootstrap';
+import AboutPage from '../pages/AboutPage';
+import EventPage from '../pages/EventPage';
+import LoginPage from '../pages/LoginPage';
 
 
 function HomePage() {
   return (
- 
-    // src/pages/HomePage.js
-
+    <>
     <div
       style={{
         maxWidth: '80%',
-        height:'500px',
         margin: 'auto',
         border: '2px solid #007bff', // Primary color border
         borderRadius: '10px',
         backgroundColor: '#ffffff',
       }}
     >
-      <Carousel g>
+      {/* Carousel Component */}
+      <Carousel>
         <Carousel.Item
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             overflow: 'hidden',
-            height:'497px'
+            height: '497px',
           }}
         >
           <img
@@ -34,7 +34,7 @@ function HomePage() {
             style={{
               height: '100%',
               width: '100%',
-              objectFit: 'cover', 
+              objectFit: 'cover',
             }}
           />
           <Carousel.Caption
@@ -49,9 +49,8 @@ function HomePage() {
               Volunteer to Teach English
             </h5>
             <p style={{ fontSize: '0.875rem', color: '#333333', marginBottom: '10px' }}>
-              The volunteer program for teaching English is designed for
-              international volunteers seeking a practical classroom experience
-              in primary schools, helping children learn reading and writing English.
+              The volunteer program for teaching English is designed for international volunteers seeking
+              a practical classroom experience in primary schools, helping children learn reading and writing English.
             </p>
             <Button
               variant="primary"
@@ -67,21 +66,22 @@ function HomePage() {
             </Button>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item
           style={{
             alignItems: 'center',
             justifyContent: 'center',
             overflow: 'hidden',
-            height:'497px'
+            height: '497px',
           }}
         >
           <img
             src={require('../components/image/ExampleCarouselImage/volunter 2.jpg')}
-            alt="First slide"
+            alt="Second slide"
             style={{
               height: '100%',
               width: '100%',
-              objectFit: 'cover', 
+              objectFit: 'cover',
             }}
           />
           <Carousel.Caption
@@ -93,10 +93,11 @@ function HomePage() {
             }}
           >
             <h5 style={{ fontSize: '1.25rem', color: '#007bff', marginBottom: '5px' }}>
-              Volunteer to Teach Computer Program
+              Volunteer to Teach Computer Programming
             </h5>
             <p style={{ fontSize: '0.875rem', color: '#333333', marginBottom: '10px' }}>
-            Volunteer to Teach Computer Programming, designed for international volunteers seeking hands-on classroom experience in empowering women through coding and digital skills.
+              Volunteer to Teach Computer Programming, designed for international volunteers seeking
+              hands-on classroom experience in empowering women through coding and digital skills.
             </p>
             <Button
               variant="primary"
@@ -113,8 +114,23 @@ function HomePage() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </div>
+      </div>
+      {/* Display other pages/components directly under the carousel */}
+      <div>
+        <AboutPage />
+      </div>
+      <div>
+        <EventPage />
+      </div>
+      <div>
+        <LoginPage />
+      </div>
+
+      {/* Footer */}
+      {/* <Footer /> */}
+    </>
   );
 }
 
-export default HomePage; 
+export default HomePage;
+
