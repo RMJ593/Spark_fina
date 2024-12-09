@@ -7,7 +7,6 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/register';
 import EventPage from './pages/EventPage';
 import AboutPage from './pages/AboutPage';
-import Community from './pages/Community';
 import RedeemPage from './pages/RedeemPage';
 import NavigationBar from './components/NavigationBar';
 import Footer from './components/Footer';
@@ -24,7 +23,6 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/event" element={<EventPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/community" element={<Community />} />
           <Route path="/redeem" element={<RedeemPage />} />
           <Route path="/register" element={<RegisterPage />} />
         </Routes>

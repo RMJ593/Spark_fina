@@ -28,7 +28,6 @@ function NavigationBar() {
             <Nav.Link href="/about"><Button variant="primary" className="me-2">ABOUT</Button></Nav.Link>
             <Nav.Link href="/event"><Button variant="primary">EVENTS</Button></Nav.Link>
             <Nav.Link href="/redeem"><Button variant="primary">REDEEM</Button></Nav.Link>
-            <Nav.Link href="/community"><Button variant="primary">COMMUNITY</Button></Nav.Link>
             <Nav.Link href="/login"><Button variant="primary">LOGIN</Button></Nav.Link>
           </Nav>
         </Navbar.Collapse>
