@@ -1,7 +1,6 @@
 import React from "react";
 import "./about.css";
 // import logo from '../components/image/logo.png';
-import profilePic from '../components/image/pic.jpg';
 import { Link } from 'react-router-dom'; 
 
 const About = () => {
@@ -10,7 +9,7 @@ const About = () => {
       {/* <img className="logo" src={logo} alt="Spark Logo" /> */}
 
       <div className="content">
-        <img className="pic" src={profilePic} alt="Profile Picture" />
+      src={require('../components/image/ExampleCarouselImage/pic.jpg')}
 
         <div className="text">
           <h2 className="subh">Volunteer Together........</h2>
