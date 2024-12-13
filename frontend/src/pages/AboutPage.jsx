@@ -11,7 +11,7 @@ const About = () => {
       <div className="content">
       <img
           src={require("../components/image/ExampleCarouselImage/pic.jpg")}
-          alt="Example"
+          alt="A scenic view"
           className="pic"
         />
 
