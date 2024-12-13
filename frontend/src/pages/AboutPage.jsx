@@ -9,7 +9,11 @@ const About = () => {
       {/* <img className="logo" src={logo} alt="Spark Logo" /> */}
 
       <div className="content">
-      src={require('../components/image/ExampleCarouselImage/pic.jpg')}
+      <img
+          src={require("../components/image/ExampleCarouselImage/pic.jpg")}
+          alt="Example"
+          className="pic"
+        />
 
         <div className="text">
           <h2 className="subh">Volunteer Together........</h2>
